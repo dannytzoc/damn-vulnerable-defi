@@ -45,6 +45,7 @@ describe('[Challenge] Climber', function () {
         expect(
             await this.timelock.hasRole(await this.timelock.ADMIN_ROLE(), deployer.address)
         ).to.be.true;
+    
 
         // Deploy token and transfer initial token balance to the vault
         this.token = await (await ethers.getContractFactory('DamnValuableToken', deployer)).deploy();
